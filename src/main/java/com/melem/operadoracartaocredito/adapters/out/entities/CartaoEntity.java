@@ -30,7 +30,4 @@ public class CartaoEntity {
     @OneToOne
     @JoinColumn(name = "cliente_id")
     private ClienteEntity cliente;
-
-    public CartaoEntity(String numeroCartao, LocalDate dataExpiracao, String cvv, double limiteCredito, ClienteEntity cliente, LocalDate ultimaAlteracaoLimite, Integer dataVencimentoFatura) {
-    }
 }

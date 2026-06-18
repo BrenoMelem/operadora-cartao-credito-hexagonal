@@ -103,6 +103,14 @@ public class CartaoDomain {
         this.cliente = cliente;
     }
     public CartaoDomain(String numeroCartao, LocalDate dataExpiracao, String cvv, double limiteCredito, ClienteDomain cliente, LocalDate ultimaAlteracaoLimite, Integer dataVencimentoFatura) {
+        this.numero = numero;
+        this.dataExpiracao = dataExpiracao;
+        this.cvv = cvv;
+        this.limite = limite;
+        this.availableLimit = limite; // cartão novo: limite disponível = limite total
+        this.cliente = cliente;
+        this.ultimaAlteracaoLimite = ultimaAlteracaoLimite;
+        this.dataVencimentoFatura = dataVencimentoFatura;
     }
 
 }

@@ -20,8 +20,8 @@ public class ClienteController {
 
     @PostMapping
     public ResponseEntity<ClienteResponseDTO> solicitaCartao(@RequestBody ClienteRequestDTO clienteRequestDTO) {
-        mapper.toResponse(clienteServicePort.solicitarCartao(mapper.toDomain(clienteRequestDTO)));
-        return ResponseEntity.ok().build();
+        ClienteResponseDTO resposta = mapper.toResponse(clienteServicePort.solicitarCartao(mapper.toDomain(clienteRequestDTO)));
+        return ResponseEntity.ok(resposta);
     }
 
     @GetMapping
